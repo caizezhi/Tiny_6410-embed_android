@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
-import com.friendlyarm.ADCTestingActivity.R;
+import com.friendlyarm.MainActivity.R;
 
 /**
  * Created by CAI on 6/3/2016.
@@ -24,11 +24,11 @@ public class MainActivity extends Activity{
                 //新建一个Intent
                 Intent intent = new Intent();
                 //制定intent要启动的类
-                intent.setClass(MainActivity.this, com.friendlyarm.LEDDemo.LEDTestingActivity.class);
+                intent.setClass(com.friendlyarm.MainActivity.MainActivity.this, com.friendlyarm.LEDDemo.LEDTestingActivity.class);
                 //启动一个新的Activity
                 startActivity(intent);
                 //关闭当前的
-                MainActivity.this.finish();
+                com.friendlyarm.MainActivity.MainActivity.this.finish();
 
             }
         });
@@ -38,11 +38,11 @@ public class MainActivity extends Activity{
                 //新建一个Intent
                 Intent intent = new Intent();
                 //制定intent要启动的类
-                intent.setClass(MainActivity.this, com.friendlyarm.ADCTestingActivity.ADCTestingActivity.class);
+                intent.setClass(com.friendlyarm.MainActivity.MainActivity.this, com.friendlyarm.ADCTestingActivity.ADCTestingActivity.class);
                 //启动一个新的Activity
                 startActivity(intent);
                 //关闭当前的
-                MainActivity.this.finish();
+                com.friendlyarm.MainActivity.MainActivity.this.finish();
 
             }
         });
