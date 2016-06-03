@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LED Test</string>
+    <string name="led1on">LED1 On</string>
+    <string name="led1off">LED1 Off</string>
+    <string name="led2on">LED2 On</string>
+    <string name="led2off">LED2 Off</string>
+    <string name="led3on">LED3 On</string>
+    <string name="led3off">LED3 Off</string>
+    <string name="led4on">LED4 On</string>
+    <string name="led4off">LED4 Off</string>
+</resources>
