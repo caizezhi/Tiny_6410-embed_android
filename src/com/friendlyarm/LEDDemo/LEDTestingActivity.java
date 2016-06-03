@@ -5,7 +5,12 @@ import android.widget.TextView;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import com.friendlyarm.MainActivity.MainActivity;
 import com.friendlyarm.MainActivity.R;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.KeyEvent;
+
 
 import com.friendlyarm.AndroidSDK.HardwareControler;
 
@@ -74,4 +79,18 @@ public class LEDTestingActivity extends Activity implements OnClickListener {
 			break;
 		}
 	}
+    public boolean onKeyDown(int keyCode,KeyEvent
+            event){
+        if (keyCode==KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0)
+        {
+            Intent myIntent;
+            myIntent = new Intent(LEDTestingActivity.this, MainActivity.class);
+            startActivity(myIntent);
+            this.finish();
+        }
+        return false;
+
+
+    }
 }

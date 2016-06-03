@@ -12,55 +12,58 @@ import android.widget.TextView;
 
 import com.friendlyarm.AndroidSDK.HardwareControler;
 import com.friendlyarm.MainActivity.R;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.KeyEvent;
 
 /**
  * Created by CAI on 16/6/3.
  */
-public class ADCTestingActivity extends Activity{
+public class ADCTestingActivity extends Activity {
     private static final String TAG = "ADCTestingActivity";
 
-    public static final int Update_UI=0;
+    public static final int Update_UI = 0;
 
     private Timer mTimer = null;
     private TimerTask mTimerTask = null;
 
-    private TextView mTextView_ADC=null;
+    private TextView mTextView_ADC = null;
     private int result = 0;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adclayout);
         initUI();
         initData();
     }
 
-    private void initUI(){
-        mTextView_ADC = (TextView)findViewById(R.id.TextView_adcresult);
+    private void initUI() {
+        mTextView_ADC = (TextView) findViewById(R.id.TextView_adcresult);
     }
 
-    private void initData(){
+    private void initData() {
         mTimer = new Timer();
-        mTimerTask = new TimerTask(){
+        mTimerTask = new TimerTask() {
             @Override
-            public void run(){
+            public void run() {
                 result = HardwareControler.readADC();
-                if(-1==result){
-                    Log.e(TAG,"Read ADC ERROR!");
-                }else{
-                    Log.i(TAG,"readADC result:"+result);
+                if (-1 == result) {
+                    Log.e(TAG, "Read ADC ERROR!");
+                } else {
+                    Log.i(TAG, "readADC result:" + result);
                     mHandler.sendMessage(mHandler.obtainMessage(Update_UI));
                 }
             }
         };
-        mTimer.schedule(mTimerTask,0,500);
+        mTimer.schedule(mTimerTask, 0, 500);
     }
 
-    private Handler mHandler = new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
-        public void handleMessage(Message msg){
+        public void handleMessage(Message msg) {
             int type = msg.what;
-            switch(type){
+            switch (type) {
                 case Update_UI:
                     mTextView_ADC.setText(String.valueOf(result));
                     break;
@@ -69,12 +72,26 @@ public class ADCTestingActivity extends Activity{
             }
         }
     };
+
     @Override
-    protected void onDestroy(){
-        if(mTimer != null){
+    protected void onDestroy() {
+        if (mTimer != null) {
             mTimer.cancel();
             mTimer = null;
         }
         super.onDestroy();
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent
+            event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            Intent myIntent;
+            myIntent = new Intent(ADCTestingActivity.this, com.friendlyarm.MainActivity.MainActivity.class);
+            startActivity(myIntent);
+            this.finish();
+        }
+        return false;
+
     }
 }
