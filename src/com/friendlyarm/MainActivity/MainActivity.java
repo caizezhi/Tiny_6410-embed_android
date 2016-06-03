@@ -36,11 +36,11 @@ public class MainActivity extends Activity{
         button2.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 //新建一个Intent
-                Intent intent = new Intent();
+                Intent intent1 = new Intent();
                 //制定intent要启动的类
-                intent.setClass(com.friendlyarm.MainActivity.MainActivity.this, com.friendlyarm.ADCTestingActivity.ADCTestingActivity.class);
+                intent1.setClass(com.friendlyarm.MainActivity.MainActivity.this, com.friendlyarm.ADCTestingActivity.ADCTestingActivity.class);
                 //启动一个新的Activity
-                startActivity(intent);
+                startActivity(intent1);
                 //关闭当前的
                 com.friendlyarm.MainActivity.MainActivity.this.finish();
 

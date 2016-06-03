@@ -3,8 +3,10 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
-    <Button android:layout_height="wrap_content" android:text="@string/led1on" android:layout_width="match_parent" android:id="@+id/btnLED1On"></Button>
-    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led1off" android:id="@+id/btnLED1Off"></Button>
+    <Button android:layout_height="wrap_content" android:text="@string/led1on" android:layout_width="match_parent" android:id="@+id/btnLED1On"
+            android:layout_gravity="center_horizontal"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led1off" android:id="@+id/btnLED1Off"
+            android:layout_gravity="right"></Button>
     <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led2on" android:id="@+id/btnLED2On"></Button>
     <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led2off" android:id="@+id/btnLED2Off"></Button>
     <Button android:layout_height="wrap_content" android:text="@string/led3on" android:layout_width="match_parent" android:id="@+id/btnLED3On"></Button>
