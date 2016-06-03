@@ -5,6 +5,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import com.friendlyarm.MainActivity.R;
 
 import com.friendlyarm.AndroidSDK.HardwareControler;
 
@@ -23,7 +24,7 @@ public class LEDTestingActivity extends Activity implements OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.leddemo);
         
     	btnLED1On = (Button)findViewById(R.id.btnLED1On);
     	btnLED1Off = (Button)findViewById(R.id.btnLED1Off);

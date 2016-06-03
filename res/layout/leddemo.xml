@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <Button android:layout_height="wrap_content" android:text="@string/led1on" android:layout_width="match_parent" android:id="@+id/btnLED1On"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led1off" android:id="@+id/btnLED1Off"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led2on" android:id="@+id/btnLED2On"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led2off" android:id="@+id/btnLED2Off"></Button>
+    <Button android:layout_height="wrap_content" android:text="@string/led3on" android:layout_width="match_parent" android:id="@+id/btnLED3On"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led3off" android:id="@+id/btnLED3Off"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led4on" android:id="@+id/btnLED4On"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/led4off" android:id="@+id/btnLED4Off"></Button>
+</LinearLayout>

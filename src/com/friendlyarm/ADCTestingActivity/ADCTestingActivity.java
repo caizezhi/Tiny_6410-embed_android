@@ -11,7 +11,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.friendlyarm.AndroidSDK.HardwareControler;
-import com.friendlyarm.ADCTestingActivity.R;
+import com.friendlyarm.MainActivity.R;
 
 /**
  * Created by CAI on 16/6/3.
