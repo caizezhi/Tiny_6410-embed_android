@@ -85,7 +85,7 @@ public class LEDTestingActivity extends Activity implements OnClickListener {
                 && event.getRepeatCount() == 0)
         {
             Intent myIntent;
-            myIntent = new Intent(LEDTestingActivity.this, MainActivity.class);
+            myIntent = new Intent(LEDTestingActivity.this, com.friendlyarm.MainActivity.MainActivity.class);
             startActivity(myIntent);
             this.finish();
         }

@@ -24,4 +24,12 @@
             android:text="acd"
             android:id="@+id/button2"
             android:layout_gravity="center_horizontal"/>
+    <Button
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_x="120px"
+            android:layout_y="90px"
+            android:text="graph"
+            android:id="@+id/button3"
+            android:layout_gravity="center_horizontal"/>
 </LinearLayout>

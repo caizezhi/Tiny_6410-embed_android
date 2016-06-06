@@ -46,5 +46,19 @@ public class MainActivity extends Activity{
 
             }
         });
-    }
+    Button button3 = (Button)this.findViewById(R.id.button3);
+    button3.setOnClickListener(new Button.OnClickListener(){
+        public void onClick(View v){
+            //新建一个Intent
+            Intent intent1 = new Intent();
+            //制定intent要启动的类
+            intent1.setClass(com.friendlyarm.MainActivity.MainActivity.this, com.friendlyarm.Graph.Graph.class);
+            //启动一个新的Activity
+            startActivity(intent1);
+            //关闭当前的
+            com.friendlyarm.MainActivity.MainActivity.this.finish();
+
+        }
+    });
+}
 }
